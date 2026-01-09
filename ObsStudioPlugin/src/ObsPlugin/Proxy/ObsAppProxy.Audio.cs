@@ -17,7 +17,7 @@
 
         public event EventHandler<OldNewStringChangeEventArgs> AppInputRenamed;
 
-        private readonly List<String> _audioSourceTypes = new List<String>() { 
+        private readonly List<String> _audioSourceTypes = new List<String>() {
                 "wasapi_input_source",
                 "wasapi_output_source",
                 "browser_source",
@@ -29,7 +29,8 @@
                 "window_capture",
                 "coreaudio_input_capture",
                 "sck_audio_capture",
-                "screen_capture"
+                "screen_capture",
+                "audio_capture"
         }; 
 
         internal Dictionary<String, AudioSourceDescriptor> CurrentAudioSources { get; private set; }  = new Dictionary<String, AudioSourceDescriptor>();

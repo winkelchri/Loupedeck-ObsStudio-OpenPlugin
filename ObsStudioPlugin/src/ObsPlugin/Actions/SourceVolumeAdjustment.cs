@@ -64,11 +64,10 @@
 
         protected override String GetAdjustmentDisplayName(String actionParameter, PluginImageSize imageSize)
         {
-            //TODO: Global audio sources do not need to have scene name in the action parameter. We can come up with the better way to handle this.
-            return (SceneItemKey.TryParse(actionParameter, out var key) 
-                && key.Collection.Equals(ObsStudioPlugin.Proxy.CurrentSceneCollection) 
-                && ObsStudioPlugin.Proxy.AllSceneItems.ContainsKey(actionParameter))
-            ? ObsStudioPlugin.Proxy.AllSceneItems[actionParameter].SourceName
+            return SceneKey.TryParse(actionParameter, out var key)
+                && key.Collection.Equals(ObsStudioPlugin.Proxy.CurrentSceneCollection)
+                && ObsStudioPlugin.Proxy.CurrentAudioSources.ContainsKey(key.Source)
+            ? key.Source
             : SourceNameUnknown;
         }
         

@@ -23,15 +23,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="LoupedeckShared">
-      <HintPath>$(SolutionDir)TwitchPlugin\TwitchPlugin\Sdk\net8\LoupedeckShared.dll</HintPath>
+      <HintPath>$(ProjectDir)Sdk\net8\LoupedeckShared.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>$(SolutionDir)TwitchPlugin\TwitchPlugin\Sdk\net8\Newtonsoft.Json.dll</HintPath>
+      <HintPath>$(ProjectDir)Sdk\net8\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PluginApi">
-      <HintPath>$(SolutionDir)TwitchPlugin\TwitchPlugin\Sdk\net8\PluginApi.dll</HintPath>
+      <HintPath>$(ProjectDir)Sdk\net8\PluginApi.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Drawing" Condition=" '$(Configuration)' == 'Debug-Mac' OR  '$(Configuration)' == 'Release-Mac'">
